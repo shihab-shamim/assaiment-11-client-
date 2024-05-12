@@ -33,8 +33,8 @@ const Slideer = () => {
         className="mySwiper"
       >
         <SwiperSlide><img src={"https://i.ibb.co/v18z1F4/gray-scale-shot-black-watch.jpg"} className='w-full h-[38rem] bg-contain' alt="" /></SwiperSlide>
-        <SwiperSlide><img src={"https://i.ibb.co/GCf9pQs/beauty-product-still-life.jpg"} className='w-full h-[38rem]' alt="" /></SwiperSlide>
-        <SwiperSlide><img src={"https://i.ibb.co/MMChYFM/jars-collection-with-fresh-smoothie.jpg"} className='w-full h-[38rem]' alt="" /></SwiperSlide>
+        <SwiperSlide><img src={"https://i.ibb.co/GCf9pQs/beauty-product-still-life.jpg"} className='w-full h-[38rem] bg-contain' alt="" /></SwiperSlide>
+        <SwiperSlide><img src={"https://i.ibb.co/MMChYFM/jars-collection-with-fresh-smoothie.jpg"} className='w-full h-[38rem] bg-contain' alt="" /></SwiperSlide>
         
         
         
