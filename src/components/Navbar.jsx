@@ -16,7 +16,7 @@ const Navbar = () => {
       <NavLink className='md:ml-4 text-[#34495e] font-noto font-medium text-xl'>Home</NavLink>
       <NavLink className='md:ml-4 text-[#34495e] font-noto font-medium text-xl'>Queries</NavLink>
       <NavLink className='md:ml-4 text-[#34495e] font-noto font-medium text-xl'>Recommendations For Me</NavLink>
-      <NavLink className='md:ml-4 text-[#34495e] font-noto font-medium text-xl'>My Queries </NavLink>
+      <NavLink className='md:ml-4 text-[#34495e] font-noto font-medium text-xl' to='/myquery'>My Queries </NavLink>
       <NavLink className='md:ml-4 text-[#34495e] font-noto font-medium text-xl'>My recommendations  </NavLink>
       {user? <button onClick={handleLogOut} className="btn mt-0 md:ml-12">log-Out</button>:  <NavLink className='md:ml-4 text-[#34495e] font-noto font-medium text-xl' to='/login'>Log-in </NavLink>}
 
