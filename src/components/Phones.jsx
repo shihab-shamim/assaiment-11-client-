@@ -6,7 +6,7 @@ const Phones = () => {
     <div>
       <div className="text-center">
         <h2 className="font-bold text-3xl">5 color options </h2>
-        <p className="mt-6  text-xl "> <Typewriter words={['Select the perfect color']}
+        <p className="mt-6  text-xl "> Select <Typewriter words={[' the perfect color']}
          typeSpeed={70}
          deleteSpeed={50}
          delaySpeed={1000}
