@@ -14,7 +14,7 @@ const Navbar = () => {
   const navlink = (
     <>
       <NavLink className='md:ml-4 text-[#34495e] font-noto font-medium text-xl'>Home</NavLink>
-      <NavLink className='md:ml-4 text-[#34495e] font-noto font-medium text-xl'>Queries</NavLink>
+      <NavLink className='md:ml-4 text-[#34495e] font-noto font-medium text-xl' to='/queries'>Queries</NavLink>
       <NavLink className='md:ml-4 text-[#34495e] font-noto font-medium text-xl'>Recommendations For Me</NavLink>
       <NavLink className='md:ml-4 text-[#34495e] font-noto font-medium text-xl' to='/myquery'>My Queries </NavLink>
       <NavLink className='md:ml-4 text-[#34495e] font-noto font-medium text-xl'>My recommendations  </NavLink>
@@ -44,7 +44,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 z-50"
+            className="menu menu-sm dropdown-content mt-3  p-2 shadow bg-base-100 rounded-box w-52 z-50"
           >
             {navlink}
           </ul>

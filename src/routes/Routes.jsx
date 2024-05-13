@@ -8,6 +8,9 @@ import MyQuery from "../pages/MyQuery";
 import AddQuery from "../components/AddQuery";
 import ProtectedRoutes from "../components/protectedRoutes/ProtectedRoutes";
 
+import QuerisPages from "../pages/QuerisPages";
+import QueryDetails from "../pages/QueryDetails";
+
 
 
 const router = createBrowserRouter([
@@ -35,6 +38,15 @@ const router = createBrowserRouter([
         {
           path:'/addquery',
           element:<ProtectedRoutes><AddQuery></AddQuery></ProtectedRoutes>
+        },{
+          path:'/queries',
+          element:<QuerisPages></QuerisPages>,
+          // loader:fetch(`${import.meta.env.VITE_API_KEY}/query`)
+
+        },
+        {
+          path:'/queries/:id',
+          element:<QueryDetails></QueryDetails>
         }
       ]
       

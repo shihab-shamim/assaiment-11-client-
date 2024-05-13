@@ -18,12 +18,13 @@ const AddQuery = () => {
         const user_name=user?.displayName
         const currentDate=new Date().toLocaleString()
         const recommendationCount=0
+        const user_img=user?.photoURL
       
         const query={product_name,
             brand_name,
             product_image_url,
             query_title,
-            boycott_reason,user_email,user_name,currentDate,recommendationCount}
+            boycott_reason,user_email,user_name,currentDate,recommendationCount,user_img}
 
         // console.log({product_name,
         //     brand_name,
