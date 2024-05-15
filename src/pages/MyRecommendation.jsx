@@ -67,8 +67,8 @@ const MyRecommendation = () => {
 
 
     return (
-        <div className="container mx-auto px-4">
-            <h2>My Recommendation </h2>
+        <div className="container mx-auto px-4 min-h-[60vh]">
+            <h2 className="text-center text-4xl text-orange-300">My Recommendation </h2>
 
 
             <table className="table">

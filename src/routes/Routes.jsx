@@ -12,6 +12,7 @@ import QuerisPages from "../pages/QuerisPages";
 import QueryDetails from "../pages/QueryDetails";
 import MyRecommendation from "../pages/MyRecommendation";
 import Updates from "../pages/Updates";
+import ReccomendationForMe from "../components/ReccomendationForMe";
 
 
 
@@ -56,6 +57,11 @@ const router = createBrowserRouter([
         {
           path:'/update/:id',
           element:<ProtectedRoutes><Updates></Updates></ProtectedRoutes>
+        },
+        {
+          path:'/forme',
+          element:<ReccomendationForMe></ReccomendationForMe>
+
         }
 
 
