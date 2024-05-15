@@ -44,7 +44,7 @@ user_img} className="object-cover w-12 h-12 rounded-full shadow dark:bg-gray-500
       </div>
       <div className="card-actions ">
             <Link to={`/queries/${_id}`} className="btn btn-primary">View Details</Link>
-            <Link className="btn btn-primary">Update</Link>
+            <Link to={`/update/${_id}`} className="btn btn-primary">Update</Link>
             <button onClick={()=>handleDelete(_id)} className="btn btn-primary">Delete</button>
           </div>
            
