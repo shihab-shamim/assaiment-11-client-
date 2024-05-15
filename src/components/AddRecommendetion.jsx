@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthProvider } from "../provider/AuthContext";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 const AddRecommendetion = ({title,id,name,userEmail,userName,}) => {
@@ -33,6 +34,13 @@ const AddRecommendetion = ({title,id,name,userEmail,userName,}) => {
             try{
                 const {data}=await axios.put(`${ import.meta.env.VITE_API_KEY}/query/${queryId}`)
                 console.log(data)
+                Swal.fire({
+                    position: "top-center",
+                    icon: "success",
+                    title: "Add Recommendation",
+                    showConfirmButton: false,
+                    timer: 1500
+                  });
                 navigate('/myrecommendation')
 
 

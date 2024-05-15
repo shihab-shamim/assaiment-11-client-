@@ -20,7 +20,7 @@ const QuerisPages = () => {
       fetchData();
     }, []);
     return (
-        <div className="container mx-auto">
+        <div className="container mx-auto min-h-[60vh]">
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14">
             {

@@ -1,5 +1,6 @@
 import Banner from "../components/Banner";
 import Expline from "../components/Expline";
+import LatestQuery from "../components/LatestQuery";
 import Phones from "../components/Phones";
 import Slideer from "../components/Slideer";
 
@@ -14,7 +15,12 @@ const Home = () => {
             <Banner></Banner>
           </div>
           <div>
-            query section
+            <div className="text-center bg-gray-600 mt-12 lg:mt28 ">
+              <h2 className="text-2xl text-gray-800 font-bold px-4 py-6 rounded-sm">Latest update</h2>
+            </div>
+          <div className="mt-12 md:mt-28 lg:mt-48">
+          <LatestQuery></LatestQuery>
+          </div>
           </div>
           <div className="mt-28 md:mt-48">
             <Phones></Phones>

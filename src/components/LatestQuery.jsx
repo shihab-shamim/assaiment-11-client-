@@ -1,46 +1,37 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
+import Latest from "./Latest";
 
 
-const LatestQuery = ({querie}) => {
-    const {boycott_reason,product_name,brand_name,recommendationCount,currentDate,user_name,user_email,query_title,product_image_url,_id,
-        user_img}=querie
+const LatestQuery = () => {
+  const [letest, setLetest] = useState([]);
+  console.log(letest);
 
-    return (
-        <div className="card card-side bg-base-100 shadow-xl px-4">
-        <figure><img src={product_image_url} alt="Movie"/></figure>
-        <div className="card-body">
-          <h2 className="card-title">{query_title}</h2>
-          <p>Alternative reason : {boycott_reason}</p>
-          <div className="">
-            <h1>Product Name : {product_name}</h1>
-            <h2>Brand Name : {brand_name}</h2>
-          </div>
-          <div>
-            <h2>Post Date: {currentDate.split(',').join('  Time:')}</h2>
-            <h3>Recommendation Count : {recommendationCount}</h3>
-          </div>
-          <div>
-          <div className="flex space-x-4">
-  
-    <img alt="" src={
-user_img} className="object-cover w-12 h-12 rounded-full shadow dark:bg-gray-500" />
+  // const {boycott_reason,product_name,brand_name,recommendationCount,currentDate,user_name,user_email,query_title,product_image_url,_id,
+  //     user_img}=letest
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const { data } = await axios.get(
+          `${import.meta.env.VITE_API_KEY}/letestquery`
+        );
+        setLetest(data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchData();
+  }, []);
 
-
-    <div className="flex flex-col space-y-1">
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        {/* <Latest letest={letest}></Latest> */}
+        {
+            letest.map(letes=><Latest key={letes._id} letes={letes}></Latest>)
+        }
       
-        <a rel="noopener noreferrer" href="#" className="text-sm font-semibold">{user_name}</a>
-        
-        
-        <span className="text-xs dark:text-gray-600">{user_email}</span>
     </div>
-</div>
-
-          </div>
-          <div className="card-actions justify-end">
-            <Link to={`/queries/${_id}`} className="btn btn-primary">Recommendation</Link>
-          </div>
-        </div>
-      </div>
-    );
+  );
 };
 
 export default LatestQuery;
