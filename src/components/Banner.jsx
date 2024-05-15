@@ -14,7 +14,8 @@ const Banner = () => {
     <span className="absolute top-0 left-0 w-20 h-8 -mt-1 -ml-12 transition-all duration-300 ease-out transform -rotate-45 -translate-x-1 bg-white opacity-10 group-hover:translate-x-0"></span>
     <span className="relative z-20 flex items-center text-sm">
       
-        All Queries Page
+        <Link to='/queries'>All Queries Page</Link>
+        {/* path:'/queries', */}
 
     </span>
 </Link>

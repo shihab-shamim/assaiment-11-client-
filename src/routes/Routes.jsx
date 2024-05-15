@@ -10,6 +10,7 @@ import ProtectedRoutes from "../components/protectedRoutes/ProtectedRoutes";
 
 import QuerisPages from "../pages/QuerisPages";
 import QueryDetails from "../pages/QueryDetails";
+import MyRecommendation from "../pages/MyRecommendation";
 
 
 
@@ -46,8 +47,12 @@ const router = createBrowserRouter([
         },
         {
           path:'/queries/:id',
-          element:<QueryDetails></QueryDetails>
+          element:<ProtectedRoutes><QueryDetails></QueryDetails></ProtectedRoutes>
+        },{
+          path:'/myrecommendation',
+          element:<ProtectedRoutes><MyRecommendation></MyRecommendation></ProtectedRoutes>
         }
+
       ]
       
     },

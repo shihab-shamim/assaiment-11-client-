@@ -1,10 +1,12 @@
 import { useContext } from "react";
 import { AuthProvider } from "../provider/AuthContext";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 
 const AddQuery = () => {
     const {user}=useContext(AuthProvider)
+    const navigate=useNavigate()
 
     const handleAddQuery=async e=>{
         e.preventDefault()
@@ -34,6 +36,7 @@ const AddQuery = () => {
             try{
                 const {data}=await axios.post(`${ import.meta.env.VITE_API_KEY}/query`,query)
                 console.log(data)
+                navigate('/myquery')
         
             }catch (error){
                 console.log(error)

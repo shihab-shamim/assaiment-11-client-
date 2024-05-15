@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ProductCard from "../components/ProductCard ";
 import AddRecommendetion from "../components/AddRecommendetion";
+import AllRecommendation from "../components/AllRecommendation";
 
 
 const QueryDetails = () => {
@@ -44,8 +45,14 @@ const QueryDetails = () => {
    </div>
   </div>
 </div>
-            <AddRecommendetion></AddRecommendetion>
+            <div>
+            <AddRecommendetion title={details?.query_title}  id={details?._id} name={details?.product_name} userEmail={details?.user_email} userName={details?.user_name}></AddRecommendetion>
+            </div>
             
+            <div>
+              
+              <AllRecommendation id={id}></AllRecommendation>
+            </div>
         </div>
     );
 };
