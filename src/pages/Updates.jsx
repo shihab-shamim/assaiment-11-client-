@@ -2,6 +2,7 @@ import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { AuthProvider } from "../provider/AuthContext";
+import Swal from "sweetalert2";
 
 
 const Updates = () => {
@@ -54,10 +55,18 @@ const Updates = () => {
         //     product_image_url,
         //     query_title,
         //     boycott_reason})
+        
             try{
                 const {data}=await axios.patch(`${ import.meta.env.VITE_API_KEY}/query/${id}`,query)
                 console.log(data)
-                // navigate('/myquery')
+                Swal.fire({
+                    position: "top-center",
+                    icon: "success",
+                    title: "Your work has been saved",
+                    showConfirmButton: false,
+                    timer: 1500
+                  });
+                navigate('/myquery')
         
             }catch (error){
                 console.log(error)

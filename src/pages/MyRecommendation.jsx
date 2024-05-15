@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import RecommendationTable from "../components/RecommendationTable";
 import { AuthProvider } from "../provider/AuthContext";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 
 const MyRecommendation = () => {
@@ -26,20 +27,40 @@ const MyRecommendation = () => {
       const handleDelete=async (id,queryId)=>{
         // /table
         console.log(id)
-        try {
-            const {data} = await axios.delete(`${import.meta.env.VITE_API_KEY}/table/${id}`);
-             console.log(data)
-             fetchData();
-            try{
-              const {data} = await axios.put(`${import.meta.env.VITE_API_KEY}/tablequery/${queryId}`);
-              console.log(data)
+        Swal.fire({
+          title: "Are you sure?",
+          text: "You won't be able to revert this!",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Yes"
+        }).then(async(result) => {
+          if (result.isConfirmed) {
+            try {
+              const {data} = await axios.delete(`${import.meta.env.VITE_API_KEY}/table/${id}`);
+               console.log(data)
+               fetchData();
+              try{
+                const {data} = await axios.put(`${import.meta.env.VITE_API_KEY}/tablequery/${queryId}`);
+                console.log(data)
+              }
+              catch (error){
+                console.log(error)
+              }
+            } catch (error) {
+              console.error('Error fetching data:', error);
             }
-            catch (error){
-              console.log(error)
-            }
-          } catch (error) {
-            console.error('Error fetching data:', error);
+            Swal.fire({
+              title: "Deleted!",
+              text: "Your file has been deleted.",
+              icon: "success"
+            });
           }
+        });
+
+        // 
+       
 
 
       }

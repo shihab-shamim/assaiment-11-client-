@@ -38,8 +38,12 @@ const LogIn = () => {
                 animate__faster
               `
             }
+            // const from = location.state?.from?.pathname || '/';
+            // navigate(location?.pathname?location?.state:'/')
           });
-          navigate(location?.pathname?location?.state:'/')
+          
+        navigate(location?.pathname?location?.state: '/');
+        
         console.log(result.user)
     })
      .catch(error=>{
@@ -86,8 +90,10 @@ const LogIn = () => {
                   `,
           },
         });
-        navigate(location?.pathname?location?.state:'/')
-        console.log(result.user);
+        // const from = location.state?.from?.pathname || '/';
+        // navigate(from);
+        navigate(location?.pathname?location?.state: '/');
+        // console.log(result.user);
       })
       .catch((error) => console.log(error));
   };

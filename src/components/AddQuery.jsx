@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthProvider } from "../provider/AuthContext";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 const AddQuery = () => {
@@ -36,6 +37,14 @@ const AddQuery = () => {
             try{
                 const {data}=await axios.post(`${ import.meta.env.VITE_API_KEY}/query`,query)
                 console.log(data)
+                Swal.fire({
+                    position: "top-center",
+                    icon: "success",
+                    title: "Added query",
+                    showConfirmButton: false,
+                    timer: 1500
+                  });
+
                 navigate('/myquery')
         
             }catch (error){
