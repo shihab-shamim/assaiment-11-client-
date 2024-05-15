@@ -1,15 +1,11 @@
-import { useContext } from "react";
-import { Link } from "react-router-dom";
-import AuthContext, { AuthProvider } from "../provider/AuthContext";
 
 
-const MyQuerySection = ({query,handleDelete}) => {
-    const {user}=useContext(AuthProvider)
+const LatestQuery = ({querie}) => {
     const {boycott_reason,product_name,brand_name,recommendationCount,currentDate,user_name,user_email,query_title,product_image_url,_id,
-        user_img}=query
+        user_img}=querie
+
     return (
-        <div>
-             <div className="  bg-base-100 shadow-xl px-4">
+        <div className="card card-side bg-base-100 shadow-xl px-4">
         <figure><img src={product_image_url} alt="Movie"/></figure>
         <div className="card-body">
           <h2 className="card-title">{query_title}</h2>
@@ -39,18 +35,12 @@ user_img} className="object-cover w-12 h-12 rounded-full shadow dark:bg-gray-500
 </div>
 
           </div>
-         
+          <div className="card-actions justify-end">
+            <Link to={`/queries/${_id}`} className="btn btn-primary">Recommendation</Link>
+          </div>
         </div>
       </div>
-      <div className="card-actions ">
-            <Link to={`/queries/${_id}`} className="btn btn-primary">View Details</Link>
-            <Link to={`/update/${_id}`} className="btn btn-primary">Update</Link>
-            <button onClick={()=>handleDelete(_id)} className="btn btn-primary">Delete</button>
-          </div>
-           
-            
-        </div>
     );
 };
 
-export default MyQuerySection;
+export default LatestQuery;
