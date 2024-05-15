@@ -8,7 +8,7 @@ const MyQuerySection = ({query,handleDelete}) => {
     const {boycott_reason,product_name,brand_name,recommendationCount,currentDate,user_name,user_email,query_title,product_image_url,_id,
         user_img}=query
     return (
-        <div>
+      
              <div className="  bg-base-100 shadow-xl px-4">
         <figure><img src={product_image_url} alt="Movie"/></figure>
         <div className="card-body">
@@ -39,17 +39,19 @@ user_img} className="object-cover w-12 h-12 rounded-full shadow dark:bg-gray-500
 </div>
 
           </div>
-         
-        </div>
-      </div>
-      <div className="card-actions ">
+          <div className="card-actions ">
             <Link to={`/queries/${_id}`} className="btn btn-primary">View Details</Link>
             <Link to={`/update/${_id}`} className="btn btn-primary">Update</Link>
             <button onClick={()=>handleDelete(_id)} className="btn btn-primary">Delete</button>
           </div>
+         
+        </div>
+        
+      </div>
+     
            
             
-        </div>
+        
     );
 };
 

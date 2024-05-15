@@ -9,7 +9,9 @@ const RenderQuerie = ({querie}) => {
         user_img}=querie
 
     return (
-        <div className="card card-side bg-base-100 shadow-xl px-4">
+   
+    
+         <div className="card card-side bg-base-100 shadow-xl px-4">
         <figure><img src={product_image_url} alt="Movie"/></figure>
         <div className="card-body">
           <h2 className="card-title">{query_title}</h2>
@@ -44,6 +46,7 @@ user_img} className="object-cover w-12 h-12 rounded-full shadow dark:bg-gray-500
           </div>
         </div>
       </div>
+     
     );
 };
 
