@@ -41,8 +41,8 @@ const LogIn = () => {
             // const from = location.state?.from?.pathname || '/';
             // navigate(location?.pathname?location?.state:'/')
           });
-          
-        navigate(location?.pathname?location?.state: '/');
+          // console.log(loc)
+        navigate(location?.state ? location?.state : '/');
         
         console.log(result.user)
     })
@@ -92,7 +92,7 @@ const LogIn = () => {
         });
         // const from = location.state?.from?.pathname || '/';
         // navigate(from);
-        navigate(location?.pathname?location?.state: '/');
+        navigate(location?.state ? location?.state : '/');
         // console.log(result.user);
       })
       .catch((error) => console.log(error));
