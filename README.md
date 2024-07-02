@@ -8,10 +8,7 @@
 
 # Project Name
 
-![LiveLink](https://assaiment-11.web.app)
-![GitHub forks](https://img.shields.io/github/forks/username/repository)
-![GitHub issues](https://img.shields.io/github/issues/username/repository)
-![GitHub license](https://img.shields.io/github/license/username/repository)
+ProLand
 
 ## Table of Contents
 - [Introduction](#introduction)
