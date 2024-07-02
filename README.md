@@ -62,7 +62,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Contact
 [Your Name](mailto:your-email@example.com)
 
-[![LinkedIn](www.linkedin.com/in/shihabshamim)
+[LinkedIn Profile](https://www.linkedin.com/in/shihabshamim)
 [![GitHub](https://img.shields.io/badge/GitHub-username-lightgrey)](https://github.com/shihab-shamim)
 
 
