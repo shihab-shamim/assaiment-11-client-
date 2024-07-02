@@ -30,7 +30,7 @@ A brief introduction to the project, what it does, and the technology stack used
 ## Installation
 1. Clone the repository:
     ```bash
-    git clone https://github.com/username/repository.git
+   https://github.com/shihab-shamim/assaiment-11-client-.git
     ```
 2. Navigate to the project directory:
     ```bash
@@ -44,23 +44,13 @@ A brief introduction to the project, what it does, and the technology stack used
 ## Usage
 1. Start the development server:
     ```bash
-    npm start
+    npm run dev 
     ```
-2. Open your browser and navigate to `http://localhost:3000`
+2. Open your browser and navigate to `http://localhost:5173`
 
-## Contributing
-Contributions are welcome! Please follow these steps:
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/your-feature`).
-3. Commit your changes (`git commit -m 'Add some feature'`).
-4. Push to the branch (`git push origin feature/your-feature`).
-5. Open a pull request.
 
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Contact
-[Email](shihabshamim767@gmail.com)
+
 
 [!LinkedIn Profile](https://www.linkedin.com/in/shihabshamim)
 [![GitHub](https://img.shields.io/badge/GitHub-username-lightgrey)](https://github.com/shihab-shamim)
