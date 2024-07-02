@@ -10,14 +10,6 @@
 
 <a href="https://assaiment-11.web.app">ProLand</a>
 
-## Table of Contents
-- [Introduction](#introduction)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
 
 ## Introduction
 A brief introduction to the project, what it does, and the technology stack used.
