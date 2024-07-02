@@ -49,7 +49,7 @@ The project utilizes the following technologies:
   - MongoDB database for storing product data and user preferences.
 
 - **Other Technologies:**
-  - Redux for state management to maintain application state.
+  
   - Axios for making HTTP requests to fetch and update data.
 
 ## Installation
