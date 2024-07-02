@@ -60,9 +60,9 @@ Contributions are welcome! Please follow these steps:
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Contact
-[Your Name](mailto:your-email@example.com)
+[Email](shihabshamim767@gmail.com)
 
-[LinkedIn Profile](https://www.linkedin.com/in/shihabshamim)
+[!LinkedIn Profile](https://www.linkedin.com/in/shihabshamim)
 [![GitHub](https://img.shields.io/badge/GitHub-username-lightgrey)](https://github.com/shihab-shamim)
 
 
